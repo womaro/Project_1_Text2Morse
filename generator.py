@@ -1,5 +1,7 @@
+import time
+import winsound
+
 from static import MORSE
-import winsound, time
 
 
 class MorseGenerator:
@@ -26,7 +28,7 @@ class MorseGenerator:
         for letter in morse_sentence:
             print(letter)
             if letter == "ª":
-                time.sleep(0.5)
+                time.sleep(2)
             elif letter == ".":
                 winsound.Beep(self.frequency, self.short)
             else:
